@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface Comment {
   id: number;
@@ -14,13 +14,24 @@ interface Props {
 const CommentList: React.FC<Props> = ({ comments }) => {
   return (
     <div className="comment-content">
-      {comments.map((comment) => (
-        <div key={comment.id}>
-          <h3>{comment.name}</h3>
-          <p>{comment.email}</p>
-          <p>{comment.body}</p>
-        </div>
-      ))}
+      <table className="comments-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Comentario</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comments.map((comment) => (
+            <tr key={comment.id} className="comment-row">
+              <td className="comment-name">{comment.name}</td>
+              <td className="comment-email">{comment.email}</td>
+              <td className="comment-body">{comment.body}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

@@ -51,7 +51,7 @@ const Home: React.FC = () => {
 
   const [vistaComentario, setVistaComentario] = useState(false);
   const [Id, setId] = useState<number>(0);
-  
+
   return (
     <div className="p-4">
       <div className="home-content">
@@ -65,9 +65,10 @@ const Home: React.FC = () => {
         setVistaComentario={setVistaComentario}
         setId={setId}
       />
+      {vistaComentario ? <PostDetails post_id={Id} /> : null}
       <Pagination page={page} setPage={setPage} />
 
-      {vistaComentario ? <PostDetails post_id={Id} /> : null}
+      
     </div>
   );
 };

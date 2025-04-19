@@ -39,8 +39,8 @@ const PostDetails: React.FC<PostDetailsProps> = ( { post_id } ) => {
   }, [post_id]);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Detalles de la Publicación</h1>
+    <div className="post-content">
+      <h1 className="post-title">Detalles de la Publicación</h1>
       <CommentList comments={comments} />
     </div>
   );
