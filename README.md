@@ -1,13 +1,12 @@
 # Proyecto JSONPlaceholder-API
 
 📋 **Descripción**  
-Knowledge Base es una aplicación web desarrollada en React con TypeScript que permite visualizar y gestionar publicaciones (posts) obtenidas desde una API externa. La aplicación permite a los usuarios:
+ JSONPlaceholder-API es una proyecto web desarrollada en React con TypeScript que permite visualizar y gestionar publicaciones (posts) obtenidas. La aplicación permite a los usuarios:
 
 - Ver una lista de publicaciones en formato tabla.
 - Filtrar las publicaciones por título y contenido.
 - Filtrar las publicaciones por usuario.
 - Ver los comentarios asociados a cada publicación.
-- Navegar entre diferentes páginas de resultados.
 
 
 ## 🚀 Tecnologías Utilizadas
