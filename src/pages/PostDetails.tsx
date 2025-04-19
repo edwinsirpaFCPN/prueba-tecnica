@@ -15,7 +15,6 @@ interface PostDetailsProps {
   post_id: number;
 }
 const PostDetails: React.FC<PostDetailsProps> = ( { post_id } ) => {
-  /* const { id } = useParams<{ id: string }>(); */
   const [comments, setComments] = useState<Comment[]>([]);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ const PostDetails: React.FC<PostDetailsProps> = ( { post_id } ) => {
       try {
         const data = await fetchPostComments(Number(post_id));
         
-        // Verificamos que data sea un array antes de asignarlo
         if (Array.isArray(data)) {
           setComments(data as Comment[]);
         } else {

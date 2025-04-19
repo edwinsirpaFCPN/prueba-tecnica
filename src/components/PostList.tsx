@@ -1,5 +1,3 @@
-
-
 interface Post {
   id: number;
   userId: number;
@@ -13,9 +11,15 @@ interface PostListProps {
   setId: (value: number) => void;
 }
 
-const PostList: React.FC<PostListProps> = ({ posts, setVistaComentario, setId }) => {
+const PostList: React.FC<PostListProps> = ({
+  posts,
+  setVistaComentario,
+  setId,
+}) => {
   if (posts.length === 0) {
-    return <div className="text-center my-8">No se encontraron publicaciones.</div>;
+    return (
+      <div className="text-center my-8">No se encontraron publicaciones.</div>
+    );
   }
 
   return (
@@ -37,9 +41,14 @@ const PostList: React.FC<PostListProps> = ({ posts, setVistaComentario, setId })
                 <td>{post.title}</td>
                 <td>Usuario #{post.userId}</td>
                 <td>
-                  {/* <Link to={`/post/${post.id}`}> */}
-                    <button onClick={() => { setId(post.id); setVistaComentario(true);}}>Ver detalles</button>
-                  {/* </Link> */}
+                  <button
+                    onClick={() => {
+                      setId(post.id);
+                      setVistaComentario(true);
+                    }}
+                  >
+                    Ver detalles
+                  </button>
                 </td>
               </tr>
             ))}
