@@ -1,54 +1,57 @@
-# React + TypeScript + Vite
+# Proyecto JSONPlaceholder-API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📋 **Descripción**  
+Knowledge Base es una aplicación web desarrollada en React con TypeScript que permite visualizar y gestionar publicaciones (posts) obtenidas desde una API externa. La aplicación permite a los usuarios:
 
-Currently, two official plugins are available:
+- Ver una lista de publicaciones en formato tabla.
+- Filtrar las publicaciones por título y contenido.
+- Filtrar las publicaciones por usuario.
+- Ver los comentarios asociados a cada publicación.
+- Navegar entre diferentes páginas de resultados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18+**
+- **TypeScript**
+- **React Router Dom**
+- **CSS para estilos**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Estructura del Proyecto
+```
+knowledge-base/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── CommentList.tsx      # Componente para mostrar comentarios en tabla
+│   │   ├── Pagination.tsx       # Control de paginación
+│   │   ├── PostList.tsx         # Tabla de publicaciones
+│   │   ├── SearchBar.tsx        # Buscador de publicaciones
+│   │   └── UserFilter.tsx       # Filtrado por usuario
+│   ├── pages/
+│   │   ├── Home.tsx             # Página principal
+│   │   └── PostDetails.tsx      # Detalles de publicación
+│   ├── services/
+│   │   └── api.ts               # Servicios para consumir APIs
+│   ├── App.tsx                  # Componente principal
+│   ├── index.css                # Estilos globales
+│   └── main.tsx                 # Punto de entrada
+├── tsconfig.json                # Configuración de TypeScript
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🔧 Instalación
+1.Clona el repositorio
+``` sh
+git clone https://github.com/edwinsirpaFCPN/prueba-tecnica.git
+cd prueba-tecnica
 ```
+2. Instalar las dependencias
+   ```sh
+   npm install
+   ```
+3. Inicia la aplicación en modo desarrollo:
+   ```sh
+   npm ruv dec
+   ```
+4. La aplicación estará disponible en ```http://localhost:5173``` (o el puerto que configure Vite)
